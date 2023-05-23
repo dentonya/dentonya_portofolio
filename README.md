@@ -200,7 +200,7 @@
 
 
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=dentonya&bg_color=ffcfe9&color=9e4c98&line=9e4c98&point=2719e6&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![Denatonya github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=dentonya&bg_color=ffcfe9&color=9e4c98&line=9e4c98&point=2719e6&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
 
