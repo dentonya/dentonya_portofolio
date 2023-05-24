@@ -19,6 +19,8 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=dentonya&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=dentonya&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=dentonya&layout=donut&theme=dark)](https://github.com/dentonya/dentonya.github.io)
+
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=dentonya&theme=radical&no-frame=false&no-bg=false&margin-w=4)
 
@@ -66,7 +68,6 @@
 <!-- BLOG-POST-LIST:END -->
 
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=dentonya&bg_color=ffcfe9&color=9e4c98&line=9e4c98&point=2719e6&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 
 
