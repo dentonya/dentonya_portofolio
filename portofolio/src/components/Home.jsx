@@ -23,7 +23,8 @@ export const Home = () => {
                 </div>
             </div>
             <div>
-                <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-2/3 md:w-full'/>
+                {/* <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-2/3 md:w-full'/> */}
+                <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-3/4 md:w-full hidden md:block' />
             </div>
         </div>
     </div>
