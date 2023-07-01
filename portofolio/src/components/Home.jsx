@@ -1,6 +1,7 @@
 import React from 'react'
-import HeroImage from '../assets/heroImage.jpg';
+import HeroImage from '../assets/heroImage.png';
 import {FiArrowRightCircle} from 'react-icons/fi';
+import { Link } from 'react-scroll';
 
 export const Home = () => {
   return (
@@ -13,18 +14,24 @@ export const Home = () => {
                  Backend of Websites and Web Applications that leads to the success of the overall product
                 </p>
                 <div>
-                    <button className=' group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500
+                    <Link to='portfolio' smooth duration={500} className=' group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500
                     to-blue-500 cursor-pointer'>
                         Portofolio 
                         <span className='group-hover:rotate-90 duration-300'>
                             <FiArrowRightCircle size={20} className='ml-1'/>
                         </span>
-                    </button>
+                    </Link>
                 </div>
+
+                
             </div>
             <div>
-                {/* <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-2/3 md:w-full'/> */}
-                <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-3/4 md:w-full hidden md:block' />
+            <img
+            src={HeroImage}
+            alt="my profile"
+            className="rounded-2xl mx-16 my-7 w-2/3 md:w-full md:my-20 md:ml-8"
+          />
+                {/* <img src={HeroImage} alt="My Profile" className='rounded-2xl mx-auto w-3/4 md:w-full hidden md:block' /> */}
             </div>
         </div>
     </div>
