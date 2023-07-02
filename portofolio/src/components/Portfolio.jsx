@@ -1,8 +1,10 @@
 import React from 'react'
+
 import qrcode from '../assets/portfolio/qrcode.jpg'
 import watermark from '../assets/portfolio/watermark.jpg'
 import vlan from '../assets/portfolio/vlan.jpg'
 import pagination from '../assets/portfolio/pagination.jpg'
+
 
 
 
@@ -36,7 +38,9 @@ const Portfolio = () => {
             link:'https://www.section.io/engineering-education/custom-pagination-using-django-rest-framework/',
             code:'https://github.com/dentonya/Custom_Pagination_With_Django_REST_Framework',
         },
+
       
+
     ]
   return (
     <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white

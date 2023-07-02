@@ -50,7 +50,9 @@ export const SocialLinks = () => {
           Resume/Cv <BsFillPersonLinesFill size={30} />{' '}
         </>
       ),
+
       href: process.env.PUBLIC_URL + '/Atonya_Dennis_Resume.pdf',
+
       style: 'rounded-br-md',
       download: true,
     },

@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroImage from '../assets/heroImage.png';
 import {FiArrowRightCircle} from 'react-icons/fi';
+import { Link } from 'react-scroll';
 
 
 export const Home = () => {
@@ -14,6 +15,7 @@ export const Home = () => {
                  Backend of Websites and Web Applications that leads to the success of the overall product
                 </p>
                 <div>
+
                   <a
   href={process.env.PUBLIC_URL + '/Atonya_Dennis_Resume.pdf'}
   className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'
@@ -24,6 +26,7 @@ export const Home = () => {
     <FiArrowRightCircle size={20} className='ml-1' />
   </span>
 </a>
+
                 </div>
 
                 
