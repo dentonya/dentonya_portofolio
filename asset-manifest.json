@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dentonya_portofolio/static/css/main.3377f7da.css",
-    "main.js": "/dentonya_portofolio/static/js/main.217c10f2.js",
+    "main.js": "/dentonya_portofolio/static/js/main.9fe0ad05.js",
     "static/media/heroImage.png": "/dentonya_portofolio/static/media/heroImage.9b0c65e5edf5c1645854.png",
     "static/media/reactParallax.jpg": "/dentonya_portofolio/static/media/reactParallax.6f0d02a0def925fc9d7f.jpg",
     "static/media/reactWeather.jpg": "/dentonya_portofolio/static/media/reactWeather.a1988356c4f5a620716e.jpg",
@@ -19,10 +19,10 @@
     "static/media/javascript.png": "/dentonya_portofolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/dentonya_portofolio/index.html",
     "main.3377f7da.css.map": "/dentonya_portofolio/static/css/main.3377f7da.css.map",
-    "main.217c10f2.js.map": "/dentonya_portofolio/static/js/main.217c10f2.js.map"
+    "main.9fe0ad05.js.map": "/dentonya_portofolio/static/js/main.9fe0ad05.js.map"
   },
   "entrypoints": [
     "static/css/main.3377f7da.css",
-    "static/js/main.217c10f2.js"
+    "static/js/main.9fe0ad05.js"
   ]
 }
