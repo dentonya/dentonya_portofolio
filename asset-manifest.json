@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dentonya_portofolio/static/css/main.11da686c.css",
-    "main.js": "/dentonya_portofolio/static/js/main.267b8cd3.js",
+    "main.css": "/dentonya_portofolio/static/css/main.eb74581e.css",
+    "main.js": "/dentonya_portofolio/static/js/main.08729fca.js",
     "static/media/heroImage.png": "/dentonya_portofolio/static/media/heroImage.9b0c65e5edf5c1645854.png",
     "static/media/vlan.jpg": "/dentonya_portofolio/static/media/vlan.c2aa612c16bc687310ef.jpg",
     "static/media/react.png": "/dentonya_portofolio/static/media/react.0cf951a69d8e58f83f9d.png",
@@ -14,11 +14,11 @@
     "static/media/watermark.jpg": "/dentonya_portofolio/static/media/watermark.9fff55075f670af1c54c.jpg",
     "static/media/javascript.png": "/dentonya_portofolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/dentonya_portofolio/index.html",
-    "main.11da686c.css.map": "/dentonya_portofolio/static/css/main.11da686c.css.map",
-    "main.267b8cd3.js.map": "/dentonya_portofolio/static/js/main.267b8cd3.js.map"
+    "main.eb74581e.css.map": "/dentonya_portofolio/static/css/main.eb74581e.css.map",
+    "main.08729fca.js.map": "/dentonya_portofolio/static/js/main.08729fca.js.map"
   },
   "entrypoints": [
-    "static/css/main.11da686c.css",
-    "static/js/main.267b8cd3.js"
+    "static/css/main.eb74581e.css",
+    "static/js/main.08729fca.js"
   ]
 }
