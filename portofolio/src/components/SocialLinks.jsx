@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin,FaInstagram, FaTwitter } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 
@@ -13,7 +13,7 @@ export const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />{' '}
         </>
       ),
-      href: 'https://www.linkedin.com/in/atonya-dennis-7b1b3a1b0/',
+      href: 'https://www.linkedin.com/in/dennis-atonya-0992151a3',
       style: 'rounded-tr-md',
     },
     {
@@ -41,10 +41,18 @@ export const SocialLinks = () => {
           Twitter <FaTwitter size={30} />{' '}
         </>
       ),
-      href: 'https://twitter.com/AtonyaDenis',
+      href: 'https://twitter.com/i/flow/login?redirect_after_login=%2Fden_atonya%3Ft%3DZS8ITQOlyCPTgW_r2DEY3w%26s%3D09',
     },
     {
-      id: 5,
+    id: 5,
+      child:(
+        <>
+        Twitter <FaInstagram size={30} />{' '}
+      </>),
+      href: 'https://www.instagram.com/atonyadenis/?igshid=ZDc4ODBmNjlmNQ==',
+    },
+    {
+      id: 6,
       child: (
         <>
           Resume/Cv <BsFillPersonLinesFill size={30} />{' '}
