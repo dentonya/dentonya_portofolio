@@ -7,17 +7,6 @@ import react from '../assets/react.png'
 import sql from '../assets/sql.png'
 import javascript from '../assets/javascript.png'
 import tailwind from '../assets/tailwind.png'
-import mysql from '../assets/mysql.png'
-import svn from '../assets/svn.jpeg'
-import python from '../assets/python.png'
-import docker from '../assets/docker.png'
-import delphi from '../assets/delphi.png'
-import bootstrap from '../assets/bootstrap.jpeg'
-import linux from '../assets/linux.jpeg'
-import sqlite from '../assets/sqlite.png'
-
-
-
 const Experience = () => {
     const techs = [
       {
@@ -133,7 +122,7 @@ const Experience = () => {
             <p className="py-6">These are the technologies I've worked with</p>
           </div>
   
-          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
             {techs.map(({ id, src, title, style }) => (
               <div
                 key={id}
