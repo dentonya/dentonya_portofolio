@@ -2,11 +2,20 @@ import React from 'react'
 import html from '../assets/html.png'
 import css from '../assets/css.png'
 import github from '../assets/github.png'
-import nextjs from '../assets/nextjs.png'
+import django from '../assets/django.png'
 import react from '../assets/react.png'
-import graphql from '../assets/graphql.png'
+import sql from '../assets/sql.png'
 import javascript from '../assets/javascript.png'
 import tailwind from '../assets/tailwind.png'
+import mysql from '../assets/mysql.png'
+import svn from '../assets/svn.jpeg'
+import python from '../assets/python.png'
+import docker from '../assets/docker.png'
+import delphi from '../assets/delphi.png'
+import bootstrap from '../assets/bootstrap.jpeg'
+import linux from '../assets/linux.jpeg'
+import sqlite from '../assets/sqlite.png'
+
 
 
 const Experience = () => {
@@ -43,14 +52,14 @@ const Experience = () => {
       },
       {
         id: 6,
-        src: nextjs,
-        title: "Next JS",
+        src: django,
+        title: "Django",
         style: "shadow-white",
       },
       {
         id: 7,
-        src: graphql,
-        title: "GraphQL",
+        src: svn,
+        title: "SVN",
         style: "shadow-pink-400",
       },
       {
@@ -58,6 +67,54 @@ const Experience = () => {
         src: github,
         title: "GitHub",
         style: "shadow-gray-400",
+      },
+      {
+        id: 9,
+        src: python,
+        title: "Python",
+        style: "shadow-blue-600",
+      },
+      {
+        id: 10,
+        src: docker,
+        title: "Docker",
+        style: "shadow-sky-400",
+      },
+      {
+        id: 11,
+        src: sql,
+        title: "SQL",
+        style: "shadow-white",
+      },
+      {
+        id: 12,
+        src: mysql,
+        title: "MySQL",
+        style: "shadow-pink-400",
+      },
+      {
+        id: 13,
+        src: bootstrap,
+        title: "Bootstrap",
+        style: "shadow-purple-500",
+      },
+      {
+        id: 14,
+        src: delphi,
+        title: "Delphi",
+        style: "shadow-gray-400",
+      },
+      {
+        id: 15,
+        src: linux,
+        title: "Linux",
+        style: "shadow-orange-400",
+      },
+      {
+        id: 16,
+        src: sqlite,
+        title: "SQLite",
+        style: "shadow-blue-400",
       },
     ];
   
@@ -76,7 +133,7 @@ const Experience = () => {
             <p className="py-6">These are the technologies I've worked with</p>
           </div>
   
-          <div className="w-3/4 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-8 text-center py-8 px-12 sm:px-0">
             {techs.map(({ id, src, title, style }) => (
               <div
                 key={id}
