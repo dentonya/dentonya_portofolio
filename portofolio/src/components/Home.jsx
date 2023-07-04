@@ -6,14 +6,14 @@ export const Home = () => {
   return (
     <div
       name="home"
-      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
+      className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 py-8 px-12 sm:px-0"
     >
       <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
         <div className="flex flex-col justify-center md:mr-8">
           <h2 className="text-4xl sm:text-7xl font-bold text-white mb-4 md:mb-8">
             Hey, I'm Atonya Dennis
           </h2>
-          <p className="text-gray-500 max-w-md text-center md:text-left">
+          <p className="text-gray-500 max-w-md text-justify md:text-left">
             A software developer focused on building the Frontend and Backend of
             Websites and Web Applications that lead to the success of the
             overall product.

@@ -7,6 +7,14 @@ import react from '../assets/react.png'
 import sql from '../assets/sql.png'
 import javascript from '../assets/javascript.png'
 import tailwind from '../assets/tailwind.png'
+import mysql from '../assets/mysql.png'
+import svn from '../assets/svn.jpeg'
+import python from '../assets/python.png'
+import docker from '../assets/docker.png'
+import delphi from '../assets/delphi.png'
+import bootstrap from '../assets/bootstrap.jpeg'
+import linux from '../assets/linux.jpeg'
+import sqlite from '../assets/sqlite.png'
 const Experience = () => {
     const techs = [
       {
@@ -114,7 +122,7 @@ const Experience = () => {
       >
         <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
 
-          <div className='pb-auto'>
+          <div className='pb-auto py-8 px-12 sm:px-0'>
 
             <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
               Experience
