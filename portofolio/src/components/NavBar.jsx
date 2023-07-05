@@ -31,14 +31,14 @@ export const NavBar = () => {
     },
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
+    <div className="flex justify-between items-center w-full h-14 py-2 px-4 text-white bg-slate-200 fixed">
       <div className="flex items-center">
         <img
           src={HeroImage}
           alt="my profile"
           className="rounded-full h-auto w-12"
         />
-        <h1 className="text-2xl font-signature ml-4">ATONYA DENNIS</h1>
+        <h1 className="text-xl font-signature text-black  ml-4">ATONYA DENNIS</h1>
       </div>
 
       {/* Navigation Links */}
@@ -48,7 +48,7 @@ export const NavBar = () => {
         {links.map(({ id, link }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+            className="px-4 cursor-pointer text-xl capitalize font-medium text-black hover:scale-105 duration-200"
           >
             <Link to={link} smooth duration={500}>
               {link}
