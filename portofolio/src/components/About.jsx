@@ -7,7 +7,9 @@ const About = () => {
             <div className='pb-auto px-12 sm:px-0'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-500'>About</p>
             </div>
+
             <p className='text-xl mt-5 px-12 sm:px-0 text-gray-500  text-justify md:text-left'>
+
             I am a passionate and self-motivated individual with a strong focus on technology. 
             I have extensive experience in software development, networking, and freelancing projects. 
             My enthusiasm extends to fields like Machine Learning and AI.
@@ -15,7 +17,9 @@ const About = () => {
              JavaScript, HTML, CSS, Python, Django, ReactJS,SQL,MySql and Delphi for desktop app development, 
              I am always eager to learn and expand my skill set.
             </p>
+
             <p className='text-xl px-12 sm:px-0 text-gray-500  text-justify md:text-left'>
+
             I am well-versed in utilizing agile methodologies,
               including tools like Jira, and I have experience with version control systems like Git and SVN.
                Continuous growth and delivering exceptional results drive my commitment to excellence.
