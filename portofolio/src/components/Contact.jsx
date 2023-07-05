@@ -8,15 +8,15 @@ const Contact = () => {
     >
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full px-12 sm:px-0">
 
-        <div className="pb-auto">
+        <div className=" px-12 sm:px-0 pb-auto">
 
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          <p className="py-6">Submit the form below to get in touch with me</p>
+          <p className="text-gray-500  text-justify md:text-left text-xl py-6">Submit the form below to get in touch with me</p>
         </div>
 
-        <div className=" flex justify-center items-center">
+        <div className="px-12 sm:px-0 flex justify-center items-center">
           <form
             action="https://getform.io/f/14044879-d9c9-4a66-9a71-113df7e1f239"
             method="POST"
