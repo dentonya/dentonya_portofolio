@@ -15,6 +15,7 @@ import delphi from '../assets/delphi.png'
 import bootstrap from '../assets/bootstrap.jpeg'
 import linux from '../assets/linux.jpeg'
 import sqlite from '../assets/sqlite.png'
+import bgImage from '../assets/bgImage.jpg'
 const Experience = () => {
     const techs = [
       {
@@ -118,19 +119,26 @@ const Experience = () => {
     return (
       <div
         name="experience"
-        className=" bg-black w-full h-screen"
-      >
-        <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+        className=" bg-gradient-to-b from-black to-gray-800 w-full text-white
+        md:h-screen"
+        style={{
+          backgroundImage: `linear-gradient(to right, rgba(38,40,46,0.8), rgba(38,40,46,0.8)), url(${bgImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}>
+      
+        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
+      w-full h-full">
 
-          <div className='pb-auto py-8 px-12 sm:px-0'>
+          <div className='px-12 sm:px-0'>
 
-            <p className="text-4xl font-bold border-b-4 border-gray-500 p-2 inline">
+            <p className="text-4xl font-bold inline border-b-4 border-gray-500">
               Experience
             </p>
-            <p className="text-xl text-gray-500  text-justify md:text-left py-6">Some of the technologies I've worked with</p>
+            <p className="text-xl py-6 text-white-500  text-justify md:text-left">Some of the technologies I've worked with</p>
           </div>
   
-          <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0">
             {techs.map(({ id, src, title, style }) => (
               <div
                 key={id}
