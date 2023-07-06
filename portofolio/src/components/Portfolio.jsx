@@ -54,7 +54,7 @@ const Portfolio = () => {
       w-full h-full'>
         <div className='px-12 sm:px-0'>
             <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
-            <p className='text-xl py-6 text-white-500  text-justify md:text-left'>Check out some of my works: Articles and Projects</p>
+            <p className='text-xl py-6 text-white-500  md:text-left'>Check out some of my works: Articles and Projects</p>
         </div>
         <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0'>
         {

@@ -135,7 +135,9 @@ const Experience = () => {
           <p className="text-4xl font-bold inline text-black border-b-4 border-gray-500">
             Experience
           </p>
-          <p className="text-xl py-6 text-gray-500  text-justify md:text-left">
+
+          <p className="text-xl py-6 text-gray-500  md:text-left">
+
             Some of the technologies I've worked with
           </p>
         </div>
