@@ -24,8 +24,7 @@ export const Home = () => {
 
           <p className=" text-xl text-white max-w-md  md:text-left">
 
-            A software developer focused on building the Frontend and Backend of
-            Websites and Web Applications that lead to the success of the
+            A software developer focused on building Software Applications that lead to the success of the
             overall product.
           </p>
           <div className="mt-4">
