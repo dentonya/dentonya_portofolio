@@ -61,7 +61,7 @@ const Portfolio = () => {
             portfolios.map(({id,src,text,link,code}) => (
             <div key={id} className='shadow-md shadow-gray-100 rounded-lg'>
                 <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
-                <p className='w-3/4 px-2 m-4 duration-200 hover:scale-105 text-white-500  text-justify md:text-left'>{text}</p>
+                <p className='w-3/4 px-2 m-4 duration-200 hover:scale-105 text-white-500  text-center md:text-left'>{text}</p>
                 <div className='flex items-center justify-center'>
                 <a href={link} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
                  target='_blank'
