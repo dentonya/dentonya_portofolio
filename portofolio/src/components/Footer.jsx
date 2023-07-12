@@ -32,7 +32,7 @@ const Footer = () => {
   return (
     <div className="font-general-regular flex justify-center  text-center bg-slate-200 text-gray-500 w-full h-10 px-4">
       <div className="text-lg text-ternary-dark dark:text-ternary-light flex items-center">
-       
+      <p className='flex items-center'> &copy; {new Date().getFullYear()}</p>
         <ul className="flex gap-4 sm:gap-8 ml-4">
           {socialLinks.map((link) => (
             <li key={link.id}>
@@ -46,7 +46,7 @@ const Footer = () => {
               </a>
             </li>
           ))}
-         <p className='flex items-center'> &copy; {new Date().getFullYear()}</p>
+    
         </ul>
          
         

@@ -47,7 +47,7 @@ export const SocialLinks = () => {
     id: 5,
       child:(
         <>
-        Twitter <FaInstagram size={30} />{' '}
+        Instagram <FaInstagram size={30} />{' '}
       </>),
       href: 'https://www.instagram.com/atonyadenis/?igshid=ZDc4ODBmNjlmNQ==',
     },
