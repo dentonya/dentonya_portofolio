@@ -7,18 +7,21 @@ import { NavBar } from "./components/NavBar";
 import Portfolio from "./components/Portfolio";
 import {WhatsApp} from "./components/WhatsApp";
 import { SocialLinks } from "./components/SocialLinks";
+import Test from "./components/Test";
 
 function App() {
   return (
     <div>
       <NavBar />
       <Home />
+      <Test />
       <About /> 
       <Portfolio /> 
       <Experience /> 
       <Contact />
       <SocialLinks />
       <WhatsApp />
+      
       <Footer />
       
          </div>
