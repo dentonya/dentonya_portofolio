@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dentonya_portofolio/static/css/main.d5fda85b.css",
-    "main.js": "/dentonya_portofolio/static/js/main.b062d940.js",
+    "main.js": "/dentonya_portofolio/static/js/main.9f0cf897.js",
     "static/media/heroImage.png": "/dentonya_portofolio/static/media/heroImage.9b0c65e5edf5c1645854.png",
     "static/media/bgImage.jpg": "/dentonya_portofolio/static/media/bgImage.611b38d6944735eba5c4.jpg",
     "static/media/vlan.jpg": "/dentonya_portofolio/static/media/vlan.c2aa612c16bc687310ef.jpg",
@@ -16,10 +16,10 @@
     "static/media/javascript.png": "/dentonya_portofolio/static/media/javascript.1ccd6ef9bb1f9c84ef00.png",
     "index.html": "/dentonya_portofolio/index.html",
     "main.d5fda85b.css.map": "/dentonya_portofolio/static/css/main.d5fda85b.css.map",
-    "main.b062d940.js.map": "/dentonya_portofolio/static/js/main.b062d940.js.map"
+    "main.9f0cf897.js.map": "/dentonya_portofolio/static/js/main.9f0cf897.js.map"
   },
   "entrypoints": [
     "static/css/main.d5fda85b.css",
-    "static/js/main.b062d940.js"
+    "static/js/main.9f0cf897.js"
   ]
 }
