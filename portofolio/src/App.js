@@ -19,7 +19,6 @@ function App() {
       <Contact />
       <SocialLinks />
       <WhatsApp />
-      
       <Footer />
       
          </div>
