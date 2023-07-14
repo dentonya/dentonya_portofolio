@@ -7,7 +7,6 @@ import pagination from '../assets/portfolio/pagination.jpg'
 
 
 
-
 const Portfolio = () => {
     //array of portfolio images
     const portfolios = [
