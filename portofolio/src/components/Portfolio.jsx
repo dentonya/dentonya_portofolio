@@ -66,42 +66,63 @@ const Portfolio = () => {
 
     ]
   return (
-    <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 w-full text-white
-     md:h-screen' 
-     style={{
+    <div
+      name="portfolio"
+      className="bg-gradient-to-b from-black to-gray-800 w-full text-white
+     md:h-screen"
+      style={{
         backgroundImage: `linear-gradient(to right, rgba(38,40,46,0.8), rgba(38,40,46,0.8)), url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
-      <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center
-      w-full h-full'>
-        <div className='px-12 sm:px-0'>
-            <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portfolio</p>
-            <p className='text-xl py-6 text-white-500  md:text-left'>Check out some of my works: Articles and Projects</p>
+      }}
+    >
+      <div
+        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
+      w-full h-full"
+      >
+        <div className="px-12 sm:px-0">
+          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
+            Portfolio
+          </p>
+          <p className="text-xl py-6 text-white-500  md:text-left">
+            Check out some of my works: Articles and Projects
+          </p>
         </div>
-        <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0'>
-        {
-            portfolios.map(({id,src,text,link,code}) => (
-            <div key={id} className='shadow-md shadow-gray-100 rounded-lg'>
-                <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
-                <p className='w-3/4 px-2 m-4 duration-200 hover:scale-105 text-white-500  text-center md:text-left'>{text}</p>
-                <div className='flex items-center justify-center'>
-                <a href={link} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
-                 target='_blank'
-                 rel='noreferrer'>Link</a>
-        <a href={code} className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'
-         target='_blank'
-         rel='noreferrer'>Code</a>
-                </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0">
+          {portfolios.map(({ id, src, text, link, code }) => (
+            <div key={id} className="shadow-md shadow-gray-100 rounded-lg">
+              <img
+                src={src}
+                alt=""
+                className="rounded-md duration-200 hover:scale-105"
+              />
+              <p className="w-3/4 px-2 m-4 duration-200 hover:scale-105 text-white-500  text-center md:text-left">
+                {text}
+              </p>
+              <div className="flex items-center justify-center">
+                <a
+                  href={link}
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Link
+                </a>
+                <a
+                  href={code}
+                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Code
+                </a>
+              </div>
             </div>
-
-            ))
-        }
-         </div>       
-        
+          ))}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

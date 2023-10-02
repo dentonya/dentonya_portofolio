@@ -12,15 +12,17 @@ const Contact = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
-      w-full h-full">
-
+      <div
+        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
+      w-full h-full"
+      >
         <div className="px-12 sm:px-0">
-
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Contact
           </p>
-          <p className="text-white-500  md:text-left text-xl py-6">Submit the form below to get in touch with me</p>
+          <p className="text-white-500  md:text-left text-xl py-6">
+            Submit the form below to get in touch with me
+          </p>
         </div>
 
         <div className="px-12 sm:px-0 flex justify-center items-center">

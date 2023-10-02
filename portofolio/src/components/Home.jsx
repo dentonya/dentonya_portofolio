@@ -29,7 +29,7 @@ export const Home = () => {
           </p>
           <div className="mt-4">
             <a
-              href={process.env.PUBLIC_URL + "/Atonya_Dennis_Resume.pdf"}
+              href={process.env.PUBLIC_URL + "/DENNIS ATONYA CV.pdf"}
               className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-gray-500 to-gray-500 cursor-pointer"
               download
             >
