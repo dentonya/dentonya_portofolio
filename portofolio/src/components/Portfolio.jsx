@@ -1,65 +1,70 @@
-import React from "react";
-import bgImage from "../assets/bgImage.jpg";
-import qrcode from "../assets/portfolio/qrcode.jpg";
-import watermark from "../assets/portfolio/watermark.jpg";
-import vlan from "../assets/portfolio/vlan.jpg";
-import pagination from "../assets/portfolio/pagination.jpg";
-import demand from "../assets/portfolio/demand.jpg";
-import etherchannel from "../assets/portfolio/etherchannel.jpg";
-import autocorrect from "../assets/portfolio/autocorrect.jpg";
+import React from 'react'
+import bgImage from '../assets/bgImage.jpg'
+import qrcode from '../assets/portfolio/qrcode.jpg'
+import watermark from '../assets/portfolio/watermark.jpg'
+import vlan from '../assets/portfolio/vlan.jpg'
+import pagination from '../assets/portfolio/pagination.jpg'
+import demand from '../assets/portfolio/demand.jpg'
+import etherchannel from '../assets/portfolio/etherchannel.jpg'
+import autocorrect from '../assets/portfolio/autocorrect.jpg'
+
+
 
 const Portfolio = () => {
-  //array of portfolio images
-  const portfolios = [
-    {
-      id: 1,
-      src: qrcode,
-      text: "QR Code Scanner User Authentication System in Computer Vision",
-      link: "https://www.section.io/engineering-education/building-qr-code-authentication-system/",
-      code: "https://github.com/dentonya/QR_Code-Authentication-System",
-    },
-    {
-      id: 2,
-      src: watermark,
-      text: "Multiple Image Watermarking Using OpenCV With Python",
-      link: "https://www.section.io/engineering-education/image-watermarking-with-opencv-python/",
-      code: "https://github.com/dentonya/Image_Watermarking",
-    },
-    {
-      id: 3,
-      src: vlan,
-      text: "Inter-VLAN Routing on Local Area Networks using Packet Tracer",
-      link: "https://www.section.io/engineering-education/inter-vlan-routing/",
-    },
-    {
-      id: 4,
-      src: pagination,
-      text: "Custom Pagination Using Django REST Framework with Vue",
-      link: "https://www.section.io/engineering-education/custom-pagination-using-django-rest-framework/",
-      code: "https://github.com/dentonya/Custom_Pagination_With_Django_REST_Framework",
-    },
-    {
-      id: 5,
-      src: demand,
-      text: "Use of predictive analytics in machine learning to predict inventory customer demands using XGBoost model",
-      link: "https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model",
-      code: "https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model",
-    },
-    {
-      id: 6,
-      src: etherchannel,
-      text: "Etherchannel Technology configuration on Local Area Networks  using packet tracer",
-      link: "https://www.section.io/engineering-education/etherchannel-technology/",
-      code: "https://www.section.io/engineering-education/etherchannel-technology/",
-    },
-    {
-      id: 7,
-      src: autocorrect,
-      text: "Autocorrect Feature using Natural Language Processing with Python",
-      link: "https://www.section.io/engineering-education/authors/antony-lia/",
-      code: "https://github.com/dentex22/Autocorrect_System",
-    },
-  ];
+    //array of portfolio images
+    const portfolios = [
+        {
+            id: 1,
+            src: qrcode,
+            text:'QR Code Scanner User Authentication System in Computer Vision',
+            link: 'https://www.section.io/engineering-education/building-qr-code-authentication-system/',
+            code:'https://github.com/dentonya/QR_Code-Authentication-System',
+        },
+        {
+            id: 2,
+            src: watermark,
+            text:'Multiple Image Watermarking Using OpenCV With Python',
+            link:'https://www.section.io/engineering-education/image-watermarking-with-opencv-python/',
+            code:'https://github.com/dentonya/Image_Watermarking',
+        },
+        {
+            id: 3,
+            src: vlan,
+            text:'Inter-VLAN Routing on Local Area Networks using Packet Tracer',
+            link:'https://www.section.io/engineering-education/inter-vlan-routing/',
+        },
+        {
+            id: 4,
+            src: pagination,
+            text:'Custom Pagination Using Django REST Framework with Vue',
+            link:'https://www.section.io/engineering-education/custom-pagination-using-django-rest-framework/',
+            code:'https://github.com/dentonya/Custom_Pagination_With_Django_REST_Framework',
+        },
+        {
+            id: 5,
+            src: demand,
+            text:'Use of predictive analytics in machine learning to predict inventory customer demands using XGBoost model',
+            link:'https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model',
+            code:'https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model',
+        },
+        {
+            id: 6,
+            src: etherchannel,
+            text:'Etherchannel Technology configuration on Local Area Networks  using packet tracer',
+            link:'https://www.section.io/engineering-education/etherchannel-technology/',
+            code:'https://www.section.io/engineering-education/etherchannel-technology/',
+        },
+        {
+            id: 7,
+            src: autocorrect,
+            text:'Autocorrect Feature using Natural Language Processing with Python',
+            link:'https://www.section.io/engineering-education/authors/antony-lia/',
+            code:'https://github.com/dentex22/Autocorrect_System',
+        },
+
+      
+
+    ]
   return (
     <div
       name="portfolio"
