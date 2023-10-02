@@ -137,7 +137,6 @@ const Experience = () => {
           </p>
 
           <p className="text-xl py-6 text-gray-500  md:text-left">
-
             Some of the technologies I've worked with
           </p>
         </div>
