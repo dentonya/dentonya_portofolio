@@ -13,7 +13,7 @@ export const SocialLinks = () => {
           LinkedIn <FaLinkedin size={30} />{" "}
         </>
       ),
-      href: "https://www.linkedin.com/in/dennis-atonya-0992151a3",
+      href: "https://www.linkedin.com/in/dennis-atonya",
       style: "rounded-tr-md",
     },
     {
