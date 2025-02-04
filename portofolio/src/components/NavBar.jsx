@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import HeroImage from "../assets/heroImage.png";
+import HeroImage from "../assets/hero.jpg";
 import { Link } from "react-scroll"; // npm install react-scroll
 
 export const NavBar = () => {
