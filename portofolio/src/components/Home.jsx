@@ -93,8 +93,9 @@ export default function Home() {
   };
 
   return (
-    <div name="home"
-      className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-8 sm:px-16"
+    <div
+      name="home"
+      className="min-h-screen flex flex-col items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-8 sm:px-16"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundBlendMode: "overlay",
@@ -104,7 +105,7 @@ export default function Home() {
         {/* Left Section - Text Content */}
         <div className="w-full md:w-2/3 text-left space-y-6">
           <h5 className="text-3xl sm:text-4xl md:text-5xl mt-4 font-bold">
-            Hello, This is <span className="text-pink-400">ATONYA DENNIS</span>, <br />
+            Hello, This is <span className="text-pink-400">ATONYA DENNIS</span>. <br />
             <span className="text-green-400">{text}</span> <br />
             <span className="text-gray-400 text-2xl sm:text-3xl tracking-widest">
               ••••••••••••••••
@@ -114,7 +115,7 @@ export default function Home() {
           </h5>
 
           {/* Social Icons & Buttons */}
-          <div className="flex gap-6 mt-6 flex-wrap">
+          <div className="flex  gap-6 mt-6 flex-wrap">
             {links.map(({ id, icon, href }) => (
               <a key={id} href={href} target="_blank" rel="noopener noreferrer">
                 {icon}
@@ -179,7 +180,7 @@ export default function Home() {
         </div>
 
         {/* Right Side - Animation Lottie */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end pt-16 mt-8 md:mt-0 overflow-hidden relative">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-end pt-16 mt-8 md:mt-0 overflow-hidden relative hidden sm:flex">
           <AnimationLottie
             animationFile={animationFile}
             className="scale-110 sm:scale-100 md:scale-110 lg:scale-125"

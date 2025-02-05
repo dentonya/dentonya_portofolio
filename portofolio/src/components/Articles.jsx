@@ -10,7 +10,7 @@ import autocorrect from '../assets/portfolio/autocorrect.jpg'
 
 
 
-const Portfolio = () => {
+const Articles = () => {
     //array of portfolio images
     const portfolios = [
         {
@@ -67,7 +67,7 @@ const Portfolio = () => {
     ]
   return (
     <div
-      name="portfolio"
+      name="articles"
       className="bg-gradient-to-b from-black to-gray-800 w-full text-white
      md:h-screen"
       style={{
@@ -82,10 +82,10 @@ const Portfolio = () => {
       >
         <div className="px-12 sm:px-0">
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Portfolio
+            Articles
           </p>
           <p className="text-xl py-6 text-white-500  md:text-left">
-            Check out some of my works: Articles and Projects
+            Check out some of my works: Articles and Articles
           </p>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0">
@@ -125,4 +125,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Articles;

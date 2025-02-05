@@ -9,9 +9,10 @@ export const NavBar = () => {
   const links = [
     { id: 1, link: "home" },
     { id: 2, link: "about" },
-    { id: 3, link: "portfolio" },
-    { id: 4, link: "experience" },
-    { id: 5, link: "contact" },
+    { id: 3, link: "experience" },
+    { id: 4, link: "projects" },
+    { id: 5, link: "articles" },
+    { id: 6, link: "contact" },
   ];
 
   // Prevent scrolling when the mobile menu is open
@@ -59,9 +60,8 @@ export const NavBar = () => {
 
       {/* Mobile Menu */}
       <ul
-        className={`${
-          nav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
-        } flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white transition-transform duration-300 ease-in-out`}
+        className={`${nav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
+          } flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white transition-transform duration-300 ease-in-out`}
       >
         {links.map(({ id, link }) => (
           <li key={id} className="px-4 cursor-pointer capitalize md:uppercase font-normal  py-6 text-4xl">
