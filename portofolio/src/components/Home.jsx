@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import bgImage from "../assets/card.png";
+import bgImage from "../assets/bgImage.jpg";
 import AnimationLottie from "../components/AnimationLottie";
 import animationFile from "../assets/development.json";
 import { HiOutlineMail } from "react-icons/hi";
