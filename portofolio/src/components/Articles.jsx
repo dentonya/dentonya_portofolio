@@ -1,124 +1,98 @@
-import React from 'react'
-import bgImage from '../assets/bgImage.jpg'
-import qrcode from '../assets/portfolio/qrcode.jpg'
-import watermark from '../assets/portfolio/watermark.jpg'
-import vlan from '../assets/portfolio/vlan.jpg'
-import pagination from '../assets/portfolio/pagination.jpg'
-import demand from '../assets/portfolio/demand.jpg'
-import etherchannel from '../assets/portfolio/etherchannel.jpg'
-import autocorrect from '../assets/portfolio/autocorrect.jpg'
-
-
+import React from 'react';
+import bgImage from '../assets/bgImage.jpg';
+import qrcode from '../assets/articles/qrcode.jpg';
+import vlan from '../assets/articles/vlan.jpg';
+import pagination from '../assets/articles/pagination.jpg';
+import AnimationLottie from "../components/AnimationLottie";
+import animationFile from "../assets/writing.json";
 
 const Articles = () => {
-    //array of portfolio images
-    const portfolios = [
-        {
-            id: 1,
-            src: qrcode,
-            text:'QR Code Scanner User Authentication System in Computer Vision',
-            link: 'https://www.section.io/engineering-education/building-qr-code-authentication-system/',
-            code:'https://github.com/dentonya/QR_Code-Authentication-System',
-        },
-        {
-            id: 2,
-            src: watermark,
-            text:'Multiple Image Watermarking Using OpenCV With Python',
-            link:'https://www.section.io/engineering-education/image-watermarking-with-opencv-python/',
-            code:'https://github.com/dentonya/Image_Watermarking',
-        },
-        {
-            id: 3,
-            src: vlan,
-            text:'Inter-VLAN Routing on Local Area Networks using Packet Tracer',
-            link:'https://www.section.io/engineering-education/inter-vlan-routing/',
-        },
-        {
-            id: 4,
-            src: pagination,
-            text:'Custom Pagination Using Django REST Framework with Vue',
-            link:'https://www.section.io/engineering-education/custom-pagination-using-django-rest-framework/',
-            code:'https://github.com/dentonya/Custom_Pagination_With_Django_REST_Framework',
-        },
-        {
-            id: 5,
-            src: demand,
-            text:'Use of predictive analytics in machine learning to predict inventory customer demands using XGBoost model',
-            link:'https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model',
-            code:'https://github.com/dentonya/inventory_management_forecasting_using_XGBoost_Model',
-        },
-        {
-            id: 6,
-            src: etherchannel,
-            text:'Etherchannel Technology configuration on Local Area Networks  using packet tracer',
-            link:'https://www.section.io/engineering-education/etherchannel-technology/',
-            code:'https://www.section.io/engineering-education/etherchannel-technology/',
-        },
-        {
-            id: 7,
-            src: autocorrect,
-            text:'Autocorrect Feature using Natural Language Processing with Python',
-            link:'https://www.section.io/engineering-education/authors/antony-lia/',
-            code:'https://github.com/dentex22/Autocorrect_System',
-        },
+  // Array of articles images
+  const articles = [
+    { id: 1, 
+      src: pagination, 
+      text: 'Custom Pagination Using Django REST Framework with Vue', 
+      link: 'https://www.cloudzilla.ai/dev-education/custom-pagination-using-django-rest-framework/'
+    },
+    { id: 2, 
+      src: qrcode, 
+      text: 'QR Code Scanner User Authentication System in Computer Vision', 
+      link: 'https://www.cloudzilla.ai/dev-education/building-qr-code-authentication-system/'
+    },
+    { id: 3, 
+      src: vlan,
+      text: 'Inter-VLAN Routing on Local Area Networks using Packet Tracer', 
+      link: 'https://www.cloudzilla.ai/dev-education/inter-vlan-routing/' 
+    },
+  ];
 
-      
 
-    ]
   return (
     <div
       name="articles"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white
-     md:h-screen"
+      className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] px-6 sm:px-16"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(38,40,46,0.8), rgba(38,40,46,0.8)), url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay',
       }}
     >
-      <div
-        className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center
-      w-full h-full"
-      >
-        <div className="px-12 sm:px-0">
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Articles
-          </p>
-          <p className="text-xl py-6 text-white-500  md:text-left">
-            Check out some of my works: Articles and Articles
-          </p>
-        </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 px-12 sm:px-0">
-          {portfolios.map(({ id, src, text, link, code }) => (
-            <div key={id} className="shadow-md shadow-gray-100 rounded-lg">
-              <img
-                src={src}
-                alt=""
-                className="rounded-md duration-200 hover:scale-105"
-              />
-              <p className="w-3/4 px-2 m-4 duration-200 hover:scale-105 text-white-500  text-center md:text-left">
-                {text}
-              </p>
-              <div className="flex items-center justify-center">
-                <a
-                  href={link}
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Link
-                </a>
-                <a
-                  href={code}
-                  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Code
-                </a>
-              </div>
+      <div className="max-w-6xl w-full text-center sm:text-left">
+        {/* Header Section */}
+        <div className="w-full flex flex-col md:flex-row items-center justify-center">
+          {/* Articles Cards */}
+          <div className="w-full md:w-3/4 text-center">
+            <div className="relative inline-block mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white px-6 py-2 bg-orange-500 rounded-md">
+                ARTICLES
+              </h2>
+              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
+              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
             </div>
-          ))}
+            <p className='text-gray-400 text-base mt-2'>Some of the articles I wrote while a technical writer at Section</p>
+            <p className='text-gray-400 text-base mt-2'>My love for Networking was just something else...😄</p> <br />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-12 sm:px-0">
+              {articles.map(({ id, src, text, link }) => (
+                <div key={id} className="w-full bg-gradient-to-br from-[#161b30] to-[#0b0f19] p-6 rounded-lg shadow-md border border-[#1f2940] min-h-[200px]">
+                  <img
+                    src={src}
+                    alt=""
+                    className="rounded-md duration-200 hover:scale-105 mb-4"
+                  />
+                  <p className="text-white font-semibold text-center mb-4">{text}</p>
+                  <div className="flex items-center justify-center gap-4">
+                    <a
+                      href={link}
+                      className="w-full px-6 py-3 m-2 text-center duration-200 hover:scale-105 text-white bg-orange-500 rounded-md"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Read More
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+            
+            <div className="mt-8 flex justify-center">
+              <a
+                href="https://www.cloudzilla.ai/dev-education/author/atonya-dennis/"
+                className="text-white bg-orange-500 px-4 py-2 rounded-full duration-200 hover:scale-105 hover:bg-orange-600"
+              >
+                View More
+              </a>
+            </div>
+          </div>
+
+          {/* Animation Section */}
+          <div className="hidden md:flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
+            <AnimationLottie
+              animationFile={animationFile}
+              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
+              style={{ background: "#0b0f19" }}
+            />
+          </div>
         </div>
       </div>
     </div>
