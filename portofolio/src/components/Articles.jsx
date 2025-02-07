@@ -86,7 +86,7 @@ const Articles = () => {
           </div>
 
           {/* Animation Section */}
-          <div className="hidden md:flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
+          <div className="flex md:col-span-1 justify-center md:justify-end pt-6 md:pt-0">
             <AnimationLottie
               animationFile={animationFile}
               className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
