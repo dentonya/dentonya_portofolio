@@ -67,8 +67,8 @@ const Experience = () => {
                 EXPERIENCES
               </h2>
               <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
-          <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
- 
+              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
+
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {experiences.map((exp) => (
@@ -92,7 +92,7 @@ const Experience = () => {
           </div>
 
           {/* Animation Section */}
-          <div className="hidden md:flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
+          <div className="md:flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
             <AnimationLottie
               animationFile={animationFile}
               className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"

@@ -10,7 +10,7 @@ export default function Home() {
   const [text, setText] = useState("");
   const [additional, setAdditional] = useState("");
   const fullText = "A Software Engineer.";
-  const additionalText = "A Code A Day | Ever Learning😊.";
+  const additionalText = "A Code A Day | Ever Learning 😊.";
 
   useEffect(() => {
     let index = 0;
@@ -180,12 +180,13 @@ export default function Home() {
         </div>
 
         {/* Right Side - Animation Lottie */}
-        <div className="w-full md:w-1/3 flex justify-center md:justify-end pt-16 mt-8 md:mt-0 overflow-hidden relative hidden sm:flex">
-          <AnimationLottie
-            animationFile={animationFile}
-            className="scale-110 sm:scale-100 md:scale-110 lg:scale-125"
-          />
-        </div>
+        <div className="flex md:col-span-1 justify-center md:justify-end pt-6 md:pt-0">
+            <AnimationLottie
+              animationFile={animationFile}
+              className="scale-125 sm:scale-100 md:scale-150 lg:scale-200"
+              style={{ background: "#0b0f19" }}
+            />
+          </div>
       </div>
     </div>
   );

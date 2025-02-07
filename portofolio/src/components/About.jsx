@@ -75,10 +75,11 @@ const About = () => {
             </p>
           </div>
 
-          <div className="hidden md:flex w-full md:w-1/3 md:justify-end pt-16 mt-8 md:mt-0 overflow-hidden relative">
+          <div className="hidden md:flex md:col-span-1 justify-center md:justify-end pt-6 md:pt-0">
             <AnimationLottie
               animationFile={animationFile}
               className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
+              style={{ background: "#0b0f19" }}
             />
           </div>
         </div>
