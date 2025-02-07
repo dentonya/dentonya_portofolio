@@ -50,7 +50,7 @@ const Articles = () => {
               <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
               <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
             </div>
-            <p className='text-gray-400 text-base mt-2'>Some of the articles I wrote while a technical writer at Section</p>
+            <p className='text-gray-400 text-base mt-2'>Some of the articles I wrote while a technical writer at Section.</p>
             <p className='text-gray-400 text-base mt-2'>My love for Networking was just something else...😄</p> <br />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-12 sm:px-0">
               {articles.map(({ id, src, text, link }) => (

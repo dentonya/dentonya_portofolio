@@ -8,7 +8,7 @@ const projects = [
     title: "eLIMAERP- Web App",
     stack: ["React JS", "Python", "Django RestFramework", "PostgreSQL", "Docker"],
     description:
-      "A comprehensive ERP system designed for farmer registration, produce collection, and farmer payments. It streamlines operations for small farmer organizations by enhancing data management, ensuring traceability, and facilitating seamless transactions."
+      "A comprehensive ERP system designed for farmer registration, produce collection, and farmer payments. It streamlines operations for small-scale farmer organizations by enhancing data management, ensuring traceability, and facilitating seamless transactions."
   },
   {
     title: "Web Service - Backend",
