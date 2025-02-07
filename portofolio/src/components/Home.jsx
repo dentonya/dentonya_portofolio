@@ -10,7 +10,7 @@ export default function Home() {
   const [text, setText] = useState("");
   const [additional, setAdditional] = useState("");
   const fullText = "A Software Engineer.";
-  const additionalText = "A Code A Day | Ever Learning.";
+  const additionalText = "A Code A Day | Ever Learning😊.";
 
   useEffect(() => {
     let index = 0;
