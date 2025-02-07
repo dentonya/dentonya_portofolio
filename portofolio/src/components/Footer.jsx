@@ -26,8 +26,8 @@ const Footer = () => {
   ];
 
   return (
-    <div className="font-general-regular flex justify-center  text-center bg-slate-200 text-gray-500 w-full h-10 px-4">
-      <div className="text-lg text-ternary-dark dark:text-ternary-light flex items-center">
+    <div className="font-general-regular flex justify-center text-center bg-gradient-to-b from-gray-800 to-black text-white w-full h-16 px-4">
+      <div className="text-lg flex items-center">
         <p className="flex items-center"> &copy; {new Date().getFullYear()}</p>
         <ul className="flex gap-4 sm:gap-8 ml-4">
           {socialLinks.map((link) => (
@@ -36,7 +36,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl sm:text-2xl md:text-3xl"
+                className="text-xl sm:text-2xl md:text-3xl hover:text-orange-400 transition duration-200"
               >
                 {link.icon}
               </a>
