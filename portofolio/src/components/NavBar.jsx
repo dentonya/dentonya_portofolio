@@ -61,8 +61,10 @@ export const NavBar = () => {
       {/* Mobile Menu */}
       <ul
         className={`${nav ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
-          } flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-gray-800 to-black text-white transition-transform duration-300 ease-in-out`}
+          } flex flex-col justify-center items-center absolute top-0 left-0 w-screen h-screen bg-gradient-to-b from-gray-800 to-black text-white transition-transform duration-300 ease-in-out overflow-hidden`}
       >
+
+
         {links.map(({ id, link }) => (
           <li key={id} className="px-4 cursor-pointer capitalize md:uppercase font-normal  py-6 text-4xl">
             <Link onClick={closeMenu} to={link} smooth duration={500}>

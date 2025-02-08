@@ -95,13 +95,13 @@ export default function Home() {
   return (
     <div
       name="home"
-      className="min-h-screen flex flex-col items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-8 sm:px-16"
+      className="min-h-screen flex flex-col items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-8 sm:px-16 overflow-hidden w-full"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundBlendMode: "overlay",
       }}
     >
-      <div className="flex flex-col md:flex-row items-center max-w-7xl w-full gap-12 pt-20 sm:pt-32">
+      <div className="flex flex-col md:flex-row items-center max-w-7xl w-full gap-12 pt-20 sm:pt-32 overflow-hidden">
         {/* Left Section - Text Content */}
         <div className="w-full md:w-2/3 text-left space-y-6">
           <h5 className="text-3xl sm:text-4xl md:text-5xl mt-4 font-bold">
@@ -115,7 +115,7 @@ export default function Home() {
           </h5>
 
           {/* Social Icons & Buttons */}
-          <div className="flex  gap-6 mt-6 flex-wrap">
+          <div className="flex gap-6 mt-6 flex-wrap">
             {links.map(({ id, icon, href }) => (
               <a key={id} href={href} target="_blank" rel="noopener noreferrer">
                 {icon}
@@ -126,10 +126,17 @@ export default function Home() {
           <div className="mt-6 flex gap-4 flex-wrap">
             <button
               className="flex items-center gap-2 border-2 border-pink-500 px-6 py-2 rounded-lg hover:bg-pink-500"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  window.scrollTo({ top: contactSection.offsetTop, behavior: 'smooth' });
+                }
+              }}
             >
               <BsFillPersonLinesFill size={20} />
               CONTACT ME
             </button>
+
             <button
               onClick={handleResumeDownload}
               className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-2 rounded-lg cursor-pointer"
@@ -147,23 +154,22 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Code Block */}
-          <div className="mt-8 bg-gray-900 p-6 rounded-lg text-left text-sm">
+          <div className="mt-8 bg-gray-900 p-6 rounded-lg text-left text-sm overflow-x-auto whitespace-pre-wrap break-words">
             <code className="text-pink-400">const</code> softwareEngineer = {"{"} <br />
             <span className="pl-4 text-green-400">name:</span>{" "}
             <span className="text-yellow-500">'Dennis Atonya'</span>, <br />
             <span className="pl-4 text-green-400">skilled_in:</span> [<br />
-            <span className="pl-8 text-yellow-400">'Python'</span>,
-            <span className="pl-8 text-yellow-400">'JavaScript/TypeScript/ReactJS'</span>,
-            <span className="pl-8 text-yellow-400">'GraphQL'</span>,
-            <span className="pl-8 text-yellow-400">'Django REST Framework'</span>,
-            <span className="pl-8 text-yellow-400">'Docker'</span>, <br />
-            <span className="pl-8 text-yellow-400">'HTML/CSS/Tailwind'</span>,
-            <span className="pl-8 text-yellow-400">'Fast API '</span>,
-            <span className="pl-8 text-yellow-400">'Postgres/SQL/MySQL'</span>,
-            <span className="pl-8 text-yellow-400">'Jira'</span>,
-            <span className="pl-8 text-yellow-400">'Git & GitHub'</span>,
-            <span className="pl-8 text-yellow-400">'Linux'</span>, <br />
+            <span className="pl-8 text-yellow-400">'Python'</span>,<br />
+            <span className="pl-8 text-yellow-400">'JavaScript/TypeScript/ReactJS'</span>,<br />
+            <span className="pl-8 text-yellow-400">'GraphQL'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Django REST Framework'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Docker'</span>,<br />
+            <span className="pl-8 text-yellow-400">'HTML/CSS/Tailwind'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Fast API '</span>,<br />
+            <span className="pl-8 text-yellow-400">'Postgres/SQL/MySQL'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Jira'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Git & GitHub'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Linux'</span> <br />
             ],<br />
             <span className="pl-4 text-green-400">hardWorker:</span>{" "}
             <span className="text-orange-400">true</span>, <br />
@@ -178,12 +184,11 @@ export default function Home() {
             {"};"}
           </div>
         </div>
-
-        {/* Right Side - Animation Lottie */}
-        <div className="flex md:col-span-1 justify-center md:justify-end pt-6 md:pt-0">
+        {/* Right Section - Animation */}
+        <div className="flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
             <AnimationLottie
               animationFile={animationFile}
-              className="scale-125 sm:scale-100 md:scale-150 lg:scale-200"
+              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
               style={{ background: "#0b0f19" }}
             />
           </div>

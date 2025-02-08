@@ -6,7 +6,7 @@ import animationFile from "../assets/contact.json";
 const Contact = () => {
   return (
     <div
-      name="contact"
+      id="contact"
       className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] px-6 sm:px-16"
       style={{
         backgroundImage: `url(${bgImage})`,

@@ -9,7 +9,7 @@ import Articles from "./components/Articles";
 
 function App() {
   return (
-    <div>
+      <div className="w-full min-h-screen overflow-x-hidden">
       <NavBar />
       <Home />
       <About />
