@@ -163,6 +163,9 @@ export default function Home() {
             <span className="pl-8 text-yellow-400">'JavaScript/TypeScript/ReactJS'</span>,<br />
             <span className="pl-8 text-yellow-400">'GraphQL'</span>,<br />
             <span className="pl-8 text-yellow-400">'Django REST Framework'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Node JS'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Nest JS'</span>,<br />
+            <span className="pl-8 text-yellow-400">'Prisma'</span>,<br />
             <span className="pl-8 text-yellow-400">'Docker'</span>,<br />
             <span className="pl-8 text-yellow-400">'HTML/CSS/Tailwind'</span>,<br />
             <span className="pl-8 text-yellow-400">'Fast API '</span>,<br />
