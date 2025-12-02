@@ -1,87 +1,69 @@
 import React from "react";
-import bgImage from "../assets/bgImage.jpg";
-import AnimationLottie from "../components/AnimationLottie";
-import animationFile from "../assets/contact.json";
 
 const Contact = () => {
   return (
-    <div
-      id="contact"
-      className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] px-6 sm:px-16"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "overlay",
-      }}
-    >
-      <div className="max-w-6xl w-full text-center sm:text-left">
-        {/* Layout Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-          {/* Contact Form Section */}
-          <div className="md:col-span-2 text-center">
-            {/* Header */}
-            <div className="relative inline-block mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white px-6 py-2 bg-orange-500 rounded-md">
-                CONTACT ME
-              </h2>
-              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
-              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
-            </div>
+    <div id="contact" name="contact" className="section-container bg-neutral-gray-50">
+      <div className="max-w-4xl w-full mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="section-title">Get In Touch</h2>
+          <div className="w-20 sm:w-24 h-1.5 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+          <p className="text-neutral-gray-600 mt-4 sm:mt-6 text-base sm:text-lg px-4">
+            Have a project in mind or want to collaborate? I'd love to hear from you!
+          </p>
+        </div>
 
-            {/* Contact Text */}
-            <p className="text-gray-400 text-base mt-2">
-              If you have any questions or concerns, please don't hesitate to get in touch.
-            </p>
-            <p className="text-gray-400 text-base mt-2">
-              I'm open to collaborations, partnerships, and opportunities that align with my skills and interests.
-            </p>
-            <p className="text-gray-400 text-base mt-2">
-              Let's connect!
-            </p>
-            <br />
-
-            {/* Form */}
-            <div className="px-6 sm:px-0 flex justify-center items-center">
-              <form
-                action="https://getform.io/f/14044879-d9c9-4a66-9a71-113df7e1f239"
-                method="POST"
-                className="flex flex-col w-full md:w-3/4"
-              >
+        <div className="card bg-white">
+          <form
+            action="https://getform.io/f/14044879-d9c9-4a66-9a71-113df7e1f239"
+            method="POST"
+            className="space-y-5 sm:space-y-6"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-semibold text-neutral-black mb-2">
+                  Name
+                </label>
                 <input
                   type="text"
+                  id="name"
                   name="name"
-                  placeholder="Enter your name"
-                  className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                  placeholder="Your name"
+                  required
+                  className="input-field"
                 />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-semibold text-neutral-black mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
+                  id="email"
                   name="email"
-                  placeholder="Enter your email"
-                  className="my-4 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
+                  placeholder="your.email@example.com"
+                  required
+                  className="input-field"
                 />
-                <textarea
-                  name="message"
-                  placeholder="Enter your message"
-                  rows="6"
-                  className="p-2 bg-transparent border-2 rounded-md text-white focus:outline-none"
-                ></textarea>
-
-                <button className="text-white bg-orange-500 px-6 py-3 my-6 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
-                  Let's Talk
-                </button>
-              </form>
+              </div>
             </div>
-          </div>
+            <div>
+              <label htmlFor="message" className="block text-sm font-semibold text-neutral-black mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell me about your project or inquiry..."
+                rows="6"
+                required
+                className="input-field resize-none"
+              ></textarea>
+            </div>
 
-          {/* Animation Section */}
-          <div className="flex md:col-span-1 justify-center md:justify-end pt-6 md:pt-0">
-            <AnimationLottie
-              animationFile={animationFile}
-              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
-              style={{ background: "#0b0f19" }}
-            />
-          </div>
+            <button type="submit" className="btn-primary w-full">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
     </div>

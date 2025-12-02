@@ -1,15 +1,145 @@
+/* Modern, friendly fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    html{
-      font-family: 'Raleway', sans-serif;
-    }
+@layer base {
+  * {
+    @apply box-border;
   }
+
+  html {
+    @apply scroll-smooth;
+    font-family: 'Poppins', 'Inter', system-ui, sans-serif;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-neutral-white text-neutral-gray-900 antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-brand-orange rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-brand-orange-dark;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  code {
+    @apply font-mono text-sm;
+  }
+}
+
+@layer components {
+  /* Modern button styles */
+  .btn-primary {
+    @apply px-6 sm:px-8 py-3 sm:py-3.5 bg-brand-orange text-neutral-black rounded-xl font-semibold text-sm sm:text-base
+           transition-all duration-300 hover:bg-brand-orange-dark hover:shadow-orange
+           active:scale-95 focus:outline-none focus:ring-4 focus:ring-brand-orange/30;
+  }
+
+  .btn-secondary {
+    @apply px-6 sm:px-8 py-3 sm:py-3.5 bg-neutral-white text-neutral-black border-2 border-neutral-gray-300 
+           rounded-xl font-semibold text-sm sm:text-base
+           transition-all duration-300 hover:border-neutral-gray-400 hover:shadow-soft-lg
+           active:scale-95 focus:outline-none focus:ring-4 focus:ring-neutral-gray-300/30;
+  }
+
+  .btn-outline {
+    @apply px-6 sm:px-8 py-3 sm:py-3.5 border-2 border-neutral-black text-neutral-black rounded-xl font-semibold text-sm sm:text-base
+           transition-all duration-300 hover:bg-neutral-black hover:text-white hover:shadow-soft-lg
+           active:scale-95 focus:outline-none focus:ring-4 focus:ring-neutral-gray-300/30;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-neutral-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-soft-lg
+           transition-all duration-300 hover:shadow-soft-xl;
+  }
+
+  .card-hover {
+    @apply transform hover:-translate-y-2;
+  }
+
+  /* Section container */
+  .section-container {
+    @apply min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 xl:px-32 py-16 sm:py-20 lg:py-32;
+  }
+
+  /* Section title */
+  .section-title {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-black mb-4;
+  }
+
+  /* Input fields */
+  .input-field {
+    @apply w-full px-5 py-4 bg-neutral-gray-50 border-2 border-neutral-gray-200 rounded-xl
+           text-neutral-black placeholder-neutral-gray-500
+           transition-all duration-300
+           focus:outline-none focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10
+           hover:border-neutral-gray-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-orange via-brand-yellow to-brand-orange-light;
+  }
+
+  .bg-gradient-orange {
+    @apply bg-gradient-to-br from-brand-orange via-brand-yellow to-brand-peach;
+  }
+
+  .bg-gradient-soft {
+    @apply bg-gradient-to-br from-neutral-gray-50 to-neutral-white;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+}

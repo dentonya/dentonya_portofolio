@@ -1,7 +1,4 @@
 import React from "react";
-import bgImage from "../assets/bgImage.jpg";
-import AnimationLottie from "../components/AnimationLottie";
-import animationFile from "../assets/projects.json";
 
 const projects = [
   {
@@ -44,51 +41,45 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div
-      name="projects"
-      className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] px-6 sm:px-16"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundBlendMode: "overlay",
-      }}
-    >
-      <div className="max-w-6xl w-full text-center sm:text-left">
-        {/* Header Section */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-center">
-          {/* Project Cards */}
-          <div className="w-full md:w-3/4 text-center">
-            <div className="relative inline-block mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white px-6 py-2 bg-orange-500 rounded-md">
-                PROJECTS
-              </h2>
-              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
-              <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
-            </div>
+    <div name="projects" className="section-container bg-neutral-white">
+      <div className="max-w-7xl w-full mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="section-title">Projects</h2>
+          <div className="w-20 sm:w-24 h-1.5 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+          <p className="text-neutral-gray-600 mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto px-4">
+            A showcase of my recent work and contributions to various projects
+          </p>
+        </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-4">
-              {projects.map((project, index) => (
-                <div key={index} className="bg-[#131a2a] p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-semibold text-orange-400">{project.title}</h3>
-                  <p className="text-gray-400 text-base mt-2">{project.description}</p>
-                  <div className="mt-2">
-                    <strong className="text-green-400">Stack:</strong>
-                    <p className="text-gray-400 text-base">{project.stack.join(", ")}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="card card-hover group bg-white"
+            >
+              <div className="flex flex-col h-full">
+                <h3 className="text-xl sm:text-2xl font-bold text-neutral-black mb-3 group-hover:text-brand-orange transition-colors duration-300">
+                  {project.title}
+                </h3>
+                <p className="text-neutral-gray-600 text-sm sm:text-base leading-relaxed mb-5 sm:mb-6 flex-grow">
+                  {project.description}
+                </p>
+                <div className="mt-auto">
+                  <div className="flex flex-wrap gap-2">
+                    {project.stack.map((tech, idx) => (
+                      <span
+                        key={idx}
+                        className="px-4 py-1.5 text-sm font-medium bg-brand-peach text-brand-orange-dark
+                                 rounded-full hover:bg-brand-orange hover:text-white transition-colors duration-200"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
-          </div>
-
-          {/* Animation Section - On the Right */}
-          <div className="flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
-            <AnimationLottie
-              animationFile={animationFile}
-              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
-              style={{ background: "#0b0f19" }}
-            />
-          </div>
+          ))}
         </div>
       </div>
     </div>

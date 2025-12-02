@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import bgImage from "../assets/bgImage.jpg";
-import AnimationLottie from "../components/AnimationLottie";
-import animationFile from "../assets/development.json";
+import HeroImage from "../assets/hero.jpg";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedin, FaWhatsapp, FaCloudDownloadAlt, FaTwitter } from "react-icons/fa";
@@ -93,108 +91,104 @@ export default function Home() {
   };
 
   return (
-    <div
-      name="home"
-      className="min-h-screen flex flex-col items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-8 sm:px-16 overflow-hidden w-full"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundBlendMode: "overlay",
-      }}
-    >
-      <div className="flex flex-col md:flex-row items-center max-w-7xl w-full gap-12 pt-20 sm:pt-32 overflow-hidden">
-        {/* Left Section - Text Content */}
-        <div className="w-full md:w-2/3 text-left space-y-6">
-          <h5 className="text-3xl sm:text-4xl md:text-5xl mt-4 font-bold">
-            Hello, This is <span className="text-pink-400">ATONYA DENNIS</span>. <br />
-            <span className="text-green-400">{text}</span> <br />
-            <span className="text-gray-400 text-2xl sm:text-3xl tracking-widest">
-              ••••••••••••••••
-            </span>{" "}
-            <br />
-            <span className="text-orange-400">{additional}</span>
-          </h5>
+    <div name="home" className="relative min-h-screen overflow-hidden bg-neutral-white">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 right-0 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-gradient-orange rounded-full blur-3xl opacity-20 -translate-y-1/3 translate-x-1/3"></div>
+      <div className="absolute bottom-0 left-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] bg-accent-blue/20 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+      
+      <div className="section-container relative z-10">
+        <div className="max-w-7xl w-full mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            
+            {/* Left Content */}
+            <div className="space-y-6 md:space-y-8 animate-slide-right">
+              {/* Badge */}
+              <div className="inline-block">
+                <span className="px-4 py-2 bg-brand-peach text-brand-orange-dark rounded-full text-xs sm:text-sm font-semibold">
+                  SOFTWARE ENGINEER
+                </span>
+              </div>
 
-          {/* Social Icons & Buttons */}
-          <div className="flex gap-6 mt-6 flex-wrap">
-            {links.map(({ id, icon, href }) => (
-              <a key={id} href={href} target="_blank" rel="noopener noreferrer">
-                {icon}
-              </a>
-            ))}
-          </div>
+              {/* Main Heading */}
+              <div className="space-y-3 md:space-y-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-neutral-black leading-tight">
+                  Hello, my name is{" "}
+                  <span className="text-gradient">Dennis Atonya</span>
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl text-neutral-gray-600 font-medium">
+                  {text || "A Software Engineer"}
+                </p>
+                <p className="text-base sm:text-lg text-neutral-gray-500">
+                  {additional || "A Code A Day | Ever Learning 😊"}
+                </p>
+              </div>
 
-          <div className="mt-6 flex gap-4 flex-wrap">
-            <button
-              className="flex items-center gap-2 border-2 border-pink-500 px-6 py-2 rounded-lg hover:bg-pink-500"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  window.scrollTo({ top: contactSection.offsetTop, behavior: 'smooth' });
-                }
-              }}
-            >
-              <BsFillPersonLinesFill size={20} />
-              CONTACT ME
-            </button>
+              {/* Description */}
+              <p className="text-base sm:text-lg text-neutral-gray-600 leading-relaxed max-w-xl">
+                Passionate about creating scalable, efficient applications. Specialized in full-stack development 
+                with expertise in Python, JavaScript/TypeScript, and modern web technologies.
+              </p>
 
-            <button
-              onClick={handleResumeDownload}
-              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-2 rounded-lg cursor-pointer"
-            >
-              <FaCloudDownloadAlt size={20} />
-              GET RESUME
-            </button>
+              {/* CTA Buttons */}
+              <div className="flex gap-3 sm:gap-4 flex-wrap">
+                <button
+                  className="btn-primary flex items-center gap-2"
+                  onClick={() => {
+                    const projectsSection = document.querySelector('[name="projects"]');
+                    if (projectsSection) {
+                      projectsSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  View Projects
+                </button>
 
-            <button
-              className="flex items-center gap-2 bg-green-500 px-6 py-2 rounded-lg hover:bg-green-600"
-              onClick={handleWhatsAppMessage}
-            >
-              <FaWhatsapp size={20} />
-              WhatsApp Me
-            </button>
-          </div>
+                <button
+                  onClick={handleResumeDownload}
+                  className="btn-secondary flex items-center gap-2"
+                >
+                  Download CV
+                </button>
+              </div>
 
-          <div className="mt-8 bg-gray-900 p-6 rounded-lg text-left text-sm overflow-x-auto whitespace-pre-wrap break-words">
-            <code className="text-pink-400">const</code> softwareEngineer = {"{"} <br />
-            <span className="pl-4 text-green-400">name:</span>{" "}
-            <span className="text-yellow-500">'Dennis Atonya'</span>, <br />
-            <span className="pl-4 text-green-400">skilled_in:</span> [<br />
-            <span className="pl-8 text-yellow-400">'Python'</span>,<br />
-            <span className="pl-8 text-yellow-400">'JavaScript/TypeScript/ReactJS'</span>,<br />
-            <span className="pl-8 text-yellow-400">'GraphQL'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Django REST Framework'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Node JS'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Nest JS'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Prisma'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Docker'</span>,<br />
-            <span className="pl-8 text-yellow-400">'HTML/CSS/Tailwind'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Fast API '</span>,<br />
-            <span className="pl-8 text-yellow-400">'Postgres/SQL/MySQL'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Jira'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Git & GitHub'</span>,<br />
-            <span className="pl-8 text-yellow-400">'Linux'</span> <br />
-            ],<br />
-            <span className="pl-4 text-green-400">hardWorker:</span>{" "}
-            <span className="text-orange-400">true</span>, <br />
-            <span className="pl-4 text-green-400">problemSolver:</span>{" "}
-            <span className="text-orange-400">true</span>, <br />
-            <span className="pl-4 text-green-400">teamPlayer:</span>{" "}
-            <span className="text-orange-400">true</span>, <br />
-            <span className="pl-4 text-green-400">effectiveCommunicator:</span>{" "}
-            <span className="text-orange-400">true</span>, <br />
-            <span className="pl-4 text-green-400">eagerToLearn:</span>{" "}
-            <span className="text-orange-400">true</span>, <br />
-            {"};"}
+              {/* Social Links */}
+              <div className="flex gap-3 sm:gap-4 pt-4">
+                {links.map(({ id, icon, href }) => (
+                  <a
+                    key={id}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-neutral-gray-100 text-neutral-gray-700 
+                             hover:bg-brand-orange hover:text-white transition-all duration-300 hover:scale-110 text-lg sm:text-xl"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Image Section */}
+            <div className="relative flex justify-center lg:justify-end animate-slide-up mt-8 lg:mt-0">
+              {/* Large circular background */}
+              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+                <div className="absolute inset-0 bg-gradient-orange rounded-full transform scale-110"></div>
+                <div className="relative aspect-square rounded-full overflow-hidden border-4 sm:border-6 md:border-8 border-white shadow-soft-xl">
+                  <img
+                    src={HeroImage}
+                    alt="Dennis Atonya"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                {/* Floating decoration circles */}
+                <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-accent-blue rounded-full opacity-80 animate-float"></div>
+                <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 bg-brand-yellow rounded-full opacity-60 animate-float animation-delay-400"></div>
+              </div>
+            </div>
+
           </div>
         </div>
-        {/* Right Section - Animation */}
-        <div className="flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
-            <AnimationLottie
-              animationFile={animationFile}
-              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
-              style={{ background: "#0b0f19" }}
-            />
-          </div>
       </div>
     </div>
   );

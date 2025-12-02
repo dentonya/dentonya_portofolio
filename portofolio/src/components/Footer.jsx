@@ -26,25 +26,40 @@ const Footer = () => {
   ];
 
   return (
-    <div className="font-general-regular flex justify-center text-center bg-gradient-to-b from-gray-800 to-black text-white w-full h-16 px-4">
-      <div className="text-lg flex items-center">
-        <p className="flex items-center"> &copy; {new Date().getFullYear()}</p>
-        <ul className="flex gap-4 sm:gap-8 ml-4">
-          {socialLinks.map((link) => (
-            <li key={link.id}>
-              <a
-                href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl sm:text-2xl md:text-3xl hover:text-orange-400 transition duration-200"
-              >
-                {link.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <footer className="bg-neutral-black text-white w-full py-10 sm:py-12 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 sm:gap-8">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <h3 className="text-xl sm:text-2xl font-bold mb-2">Dennis Atonya</h3>
+            <p className="text-neutral-gray-400 text-sm">Software Engineer</p>
+          </div>
+
+          {/* Social Links */}
+          <ul className="flex gap-3 sm:gap-4">
+            {socialLinks.map((link) => (
+              <li key={link.id}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-11 h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-neutral-gray-800 text-neutral-gray-400
+                           hover:bg-brand-orange hover:text-white transition-all duration-300 hover:scale-110 text-lg sm:text-xl"
+                  aria-label={`Visit my ${link.id} profile`}
+                >
+                  {link.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Copyright */}
+          <div className="text-neutral-gray-400 text-sm text-center md:text-right">
+            <p>&copy; {new Date().getFullYear()} Dennis Atonya</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -17,9 +17,6 @@ import bootstrap from "../assets/skills/bootstrap.svg";
 import graphql from "../assets/skills/graphql.svg";
 import linux from "../assets/skills/linux.svg";
 import sqlite from "../assets/skills/sqlite.svg";
-import bgImage from "../assets/bgImage.jpg";
-import AnimationLottie from "../components/AnimationLottie";
-import animationFile from "../assets/animation.json";
 
 const About = () => {
   const techs = [
@@ -44,71 +41,92 @@ const About = () => {
   ];
 
   return (
-    <div
-      name="about"
-      className="min-h-screen flex items-center justify-center text-white bg-[#0b0f19] bg-cover bg-center px-6 sm:px-12 lg:px-16"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundBlendMode: "overlay",
-      }}
-    >
-      <div className="max-w-6xl w-full text-center sm:text-left">
-        {/* Text Section */}
-        <div className="w-full flex flex-col md:flex-row items-center justify-center">
-          <div className="w-full md:w-2/3 text-center">
-          <div className="relative inline-block mb-8">
+    <div name="about" className="section-container bg-neutral-gray-50">
+      <div className="max-w-7xl w-full mx-auto">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="section-title">About Me</h2>
+          <div className="w-20 sm:w-24 h-1.5 bg-brand-orange mx-auto mt-4 rounded-full"></div>
+        </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-white px-6 py-2 bg-orange-500 rounded-md">
-            ABOUT ME
-          </h2>
-          <div className="absolute w-full border-t-2 border-orange-500 top-1/2 left-0 transform -translate-x-full"></div>
-          <div className="absolute w-full border-t-2 border-orange-500 top-1/2 right-0 transform translate-x-full"></div>
-          </div>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-300 text-justify">
-              I am a passionate and self-motivated software engineer with expertise in a range of technologies, including Python-Django, FastAPI, JavaScript-TypeScript, ReactJS, Databases-SQL, MySQL, Postgres, API development with GraphQL and REST, Linux Systems, and containerization using Docker.
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="space-y-5 sm:space-y-6 text-neutral-gray-700 leading-relaxed text-base sm:text-lg">
+            <p>
+              I am a passionate and self-motivated <span className="text-brand-orange font-semibold">Software Engineer</span> with expertise in modern web technologies and backend systems. I specialize in building scalable, efficient, and user-centric applications.
             </p>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-300 text-justify">
-              I have successfully contributed to various projects, demonstrating my ability to problem-solve, innovate, and deliver high-quality solutions. I am also deeply interested in Machine Learning and AI, constantly expanding my knowledge to stay ahead in the ever-evolving tech industry.
+            <p>
+              With hands-on experience in <span className="text-accent-blue font-semibold">Python (Django, FastAPI)</span>,{" "}
+              <span className="text-accent-blue font-semibold">JavaScript/TypeScript (React, Node.js)</span>, and{" "}
+              <span className="text-accent-blue font-semibold">database technologies (PostgreSQL, MySQL)</span>,
+              I've successfully delivered solutions across various domains including ERP systems, e-commerce platforms, and data management tools.
             </p>
-            <p className="mt-4 sm:mt-6 text-base sm:text-lg text-gray-300 text-justify">
-              I am an effective communicator and a team player, well-versed in agile development methodologies, utilizing tools like Jira, Git, and Trello for efficient project management and version control. Committed to continuous learning and growth, I take pride in delivering scalable and efficient software solutions that meet client and business needs while staying up to date with emerging technologies.
+            <p>
+              I thrive in <span className="text-accent-green font-semibold">agile environments</span>, leveraging tools like
+              Jira, Git, and Docker for efficient collaboration and deployment. My commitment to
+              <span className="text-accent-purple font-semibold"> continuous learning</span> keeps me at the forefront of emerging technologies,
+              including Machine Learning and AI.
             </p>
           </div>
 
-          <div className="flex w-full md:w-1/4 md:justify-end md:ml-12 lg:ml-16 pt-16 md:pt-0">
-            <AnimationLottie
-              animationFile={animationFile}
-              className="scale-125 sm:scale-150 md:scale-175 lg:scale-200"
-              style={{ background: "#0b0f19" }}
-            />
+          <div className="relative mt-8 lg:mt-0">
+            <div className="card card-hover bg-gradient-to-br from-brand-peach to-neutral-white p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-neutral-black mb-5 sm:mb-6">Quick Facts</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <span className="text-xl sm:text-2xl">💼</span>
+                  <div>
+                    <p className="font-semibold text-neutral-black">Current Role</p>
+                    <p className="text-neutral-gray-600">Software Engineer II at SunCulture</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🎯</span>
+                  <div>
+                    <p className="font-semibold text-neutral-black">Focus Areas</p>
+                    <p className="text-neutral-gray-600">Full-Stack Development, API Design, Cloud Solutions</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-2xl">🚀</span>
+                  <div>
+                    <p className="font-semibold text-neutral-black">Passion</p>
+                    <p className="text-neutral-gray-600">Building innovative solutions that make a difference</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
         {/* Skills Section */}
-        <div className="mt-8">
-          <h3 className="text-2xl text-orange-400 font-bold mb-4">Skills</h3>
-          <Marquee gradient={false} speed={40} className="flex">
-            {techs.map((tech) => (
-              <div
-                key={tech.id}
-                className={`flex flex-col items-center justify-center p-4 rounded-lg shadow-lg ${tech.style} mx-4`} // Added mx-4 for spacing
-              >
-                <div className="relative flex flex-col items-center">
-                  <img
-                    src={tech.src}
-                    alt={tech.title}
-                    className="w-16 h-16 object-contain"
-                  />
-                  <div className="bg-black bg-opacity-50 text-orange-400 py-1 mt-2 w-full text-center">
-                    {tech.title}
+        <div className="mt-12 sm:mt-16 lg:mt-20 w-full">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-neutral-black">
+            Technical Skills
+          </h3>
+          <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 shadow-soft-lg">
+            <Marquee gradient={false} speed={50} pauseOnHover={true}>
+              {techs.map((tech) => (
+                <div
+                  key={tech.id}
+                  className="mx-3 sm:mx-4 px-4 sm:px-6 py-3 sm:py-4 bg-neutral-gray-50 rounded-xl sm:rounded-2xl min-w-[120px] sm:min-w-[140px]
+                           hover:bg-brand-peach hover:shadow-soft transition-all duration-300 group"
+                >
+                  <div className="flex flex-col items-center gap-2 sm:gap-3">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
+                      <img
+                        src={tech.src}
+                        alt={tech.title}
+                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <span className="text-xs sm:text-sm font-medium text-neutral-gray-700 text-center">
+                      {tech.title}
+                    </span>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Marquee>
+              ))}
+            </Marquee>
+          </div>
         </div>
-
-
       </div>
     </div>
   );
