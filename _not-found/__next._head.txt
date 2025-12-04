@@ -1,7 +1,7 @@
 1:"$Sreact.fragment"
-2:I[97967,["/dentonya_portofolio/_next/static/chunks/9dfda924def59898.js","/dentonya_portofolio/_next/static/chunks/9226acd757fa0405.js"],"ViewportBoundary"]
-4:I[97967,["/dentonya_portofolio/_next/static/chunks/9dfda924def59898.js","/dentonya_portofolio/_next/static/chunks/9226acd757fa0405.js"],"MetadataBoundary"]
+2:I[97367,["/dentonya_portofolio/_next/static/chunks/ff1a16fafef87110.js","/dentonya_portofolio/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+4:I[97367,["/dentonya_portofolio/_next/static/chunks/ff1a16fafef87110.js","/dentonya_portofolio/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
 5:"$Sreact.suspense"
-0:{"buildId":"ecluVG1O20r1tfWk0lECo","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"ebPpSGzoa8-KyO17prRkS","rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L2",null,{"children":"$@3"}],["$","div",null,{"hidden":true,"children":["$","$L4",null,{"children":["$","$5",null,{"name":"Next.Metadata","children":"$@6"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 6:[["$","title","0",{"children":"Dennis Atonya | AI Portfolio"}],["$","meta","1",{"name":"description","content":"Chat with AI to learn about Dennis Atonya's experience, skills, and projects. Software Engineer II specializing in Python, Django, React, and full-stack development."}]]
