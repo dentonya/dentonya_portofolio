@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
+import { generateMockResponse } from "@/utils/mockAI";
 
 interface Message {
   role: "user" | "assistant";
@@ -45,26 +46,15 @@ export default function ChatInterface({ activeTab, setActiveTab }: ChatInterface
     setActiveTab("chat");
 
     try {
-      const response = await fetch("/api/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          messages: [...messages, userMessage].map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
-        }),
-      });
+      // Use client-side mock AI since API routes don't work with static export
+      const responseText = generateMockResponse(userMessage.content);
 
-      if (!response.ok) throw new Error("Failed to fetch response");
-
-      const data = await response.json();
+      // Simulate a slight delay for better UX
+      await new Promise((resolve) => setTimeout(resolve, 500));
 
       const assistantMessage: Message = {
         role: "assistant",
-        content: data.message,
+        content: responseText,
         timestamp: new Date(),
       };
 
