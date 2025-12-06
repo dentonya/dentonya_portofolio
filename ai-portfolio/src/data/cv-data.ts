@@ -3,7 +3,7 @@ export const cvData = {
     name: "Dennis Atonya",
     title: "Software Engineer II",
     location: "Nairobi, Kenya",
-    email: "dennis.atonya@gmail.com",
+    email: "denatonya@gmail.com",
     phone: "+254743460871",
     linkedin: "https://www.linkedin.com/in/dennis-atonya",
     github: "https://github.com/dentonya",

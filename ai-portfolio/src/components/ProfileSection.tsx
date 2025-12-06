@@ -55,7 +55,7 @@ function AboutContent() {
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">
-          {["Python", "Django", "Node.js", "React", "TypeScript", "AWS"].map((tag) => (
+          {["Python", "Django","Flask","FastAPI", "Node.js", "React", "TypeScript","NestJS", "AWS","Docker","PostgreSQL","MySQL/SQL","Git"].map((tag) => (
             <span
               key={tag}
               className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-500 text-white rounded-full text-xs md:text-sm font-medium"
