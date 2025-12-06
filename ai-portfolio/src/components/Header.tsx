@@ -48,7 +48,7 @@ export default function Header() {
           </svg>
         </Link>
         <Link
-          href="mailto:dennis.atonya@gmail.com"
+          href="mailto:denatonya@gmail.com"
           className="text-gray-600 hover:text-blue-600 transition-colors"
         >
           <svg
