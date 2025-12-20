@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { cvData } from "@/data/cv-data";
+import { trackResumeDownload, trackProjectView, trackProjectLinkClick, trackSocialClick } from "@/utils/analytics";
 
 interface ProfileSectionProps {
   activeTab: string;
@@ -73,11 +74,15 @@ function ProjectsContent() {
   const [currentProject, setCurrentProject] = useState(0);
 
   const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % cvData.projects.length);
+    const nextIdx = (currentProject + 1) % cvData.projects.length;
+    setCurrentProject(nextIdx);
+    trackProjectView(cvData.projects[nextIdx].name);
   };
 
   const prevProject = () => {
-    setCurrentProject((prev) => (prev - 1 + cvData.projects.length) % cvData.projects.length);
+    const prevIdx = (currentProject - 1 + cvData.projects.length) % cvData.projects.length;
+    setCurrentProject(prevIdx);
+    trackProjectView(cvData.projects[prevIdx].name);
   };
 
   const project = cvData.projects[currentProject];
@@ -116,6 +121,7 @@ function ProjectsContent() {
                 <Link
                   href={project.link}
                   target="_blank"
+                  onClick={() => trackProjectLinkClick(project.name, project.link!)}
                   className="flex items-center gap-2 px-3 md:px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors text-sm md:text-base font-medium"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -507,6 +513,7 @@ function ContactContent() {
           <Link
             href={cvData.personalInfo.linkedin}
             target="_blank"
+            onClick={() => trackSocialClick('LinkedIn', cvData.personalInfo.linkedin)}
             className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-blue-50 rounded-lg border-2 border-blue-200 hover:bg-blue-100 font-medium text-sm md:text-base text-blue-700 transition-colors"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -517,6 +524,7 @@ function ContactContent() {
           <Link
             href={cvData.personalInfo.github}
             target="_blank"
+            onClick={() => trackSocialClick('GitHub', cvData.personalInfo.github)}
             className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-gray-50 rounded-lg border-2 border-gray-300 hover:bg-gray-100 font-medium text-sm md:text-base text-gray-800 transition-colors"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -527,6 +535,7 @@ function ContactContent() {
           <Link
             href={cvData.personalInfo.twitter}
             target="_blank"
+            onClick={() => trackSocialClick('Twitter', cvData.personalInfo.twitter)}
             className="flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 bg-sky-50 rounded-lg border-2 border-sky-200 hover:bg-sky-100 font-medium text-sm md:text-base text-sky-700 transition-colors"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -552,6 +561,7 @@ function ContactContent() {
           <Link
             href={cvData.personalInfo.resume}
             target="_blank"
+            onClick={() => trackResumeDownload()}
             className="w-10 h-10 md:w-12 md:h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-lg md:text-xl"
           >
             ⬇

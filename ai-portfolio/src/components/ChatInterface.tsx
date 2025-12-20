@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import { generateMockResponse } from "@/utils/mockAI";
+import { trackChatMessage, trackTabChange } from "@/utils/analytics";
 
 interface Message {
   role: "user" | "assistant";
@@ -44,6 +45,9 @@ export default function ChatInterface({ activeTab, setActiveTab }: ChatInterface
     setInput("");
     setIsLoading(true);
     setActiveTab("chat");
+    
+    // Track user message
+    trackChatMessage('user');
 
     try {
       // Use client-side mock AI since API routes don't work with static export
@@ -59,6 +63,9 @@ export default function ChatInterface({ activeTab, setActiveTab }: ChatInterface
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
+      
+      // Track assistant response
+      trackChatMessage('assistant');
     } catch (error) {
       console.error("Error:", error);
       const errorMessage: Message = {
@@ -74,6 +81,7 @@ export default function ChatInterface({ activeTab, setActiveTab }: ChatInterface
 
   const handleTabClick = (tab: string) => {
     setActiveTab(tab);
+    trackTabChange(tab);
   };
 
   const tabs = [

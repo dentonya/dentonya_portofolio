@@ -221,6 +221,21 @@ export const cvData = {
         "Built as volunteer project during university"
       ],
       image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=800"
+    },
+    {
+      name: "Revelation Collective Community Site",
+      description: "A Christ-centered platform uniting young adults across various churches through worship, biblical teaching, and discipleship. It supports seamless event registration with M-Pesa integration and community engagement. I developed the ticketing, payment, and engagement features that bring this vision to life",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "M-Pesa API", "Laravel"],
+      highlights: [
+        "Community-driven platform",
+        "Event ticket booking with M-Pesa integration",
+        "Event booking for community events",
+        "Spiritual growth and fellowship features",
+        "Modern, responsive design"
+      ],
+      image: "https://images.unsplash.com/photo-1740650511388-f693ce80016c?w=800",
+      link: "https://revelationcollective.org/"
+
     }
   ],
   
