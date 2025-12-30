@@ -157,15 +157,16 @@ export const cvData = {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
     },
     {
-      name: "eLearning Platform",
-      description: "Collaborating on an online learning platform using Node.js for scalable backend development. Building features for course management, student enrollment, and progress tracking.",
-      technologies: ["Node.js", "Express", "MongoDB", "React"],
+      name: "SEMA platform",
+      description: "Overcoming language barriers with AI-powered solutions for African languages. We are building a digital ecosystem, fostering the use of indigenous languages, and enhancing equitable access to AI technologies across Africa.",
+      technologies: ["React", "Python", "FastAPI", "ML Models"],
       highlights: [
         "Scalable backend architecture",
         "Course management system",
         "Student progress tracking"
       ],
-      image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800"
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+      link: "https://sema-landing.onrender.com/"
     },
     {
       name: "RentEasy - House Hunting App",
