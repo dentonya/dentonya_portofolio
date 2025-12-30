@@ -86,6 +86,13 @@ export const generateMockResponse = (userMessage: string): string => {
     }
   }
 
+  if (matchKeywords(message, ["sema", "african language", "indigenous language", "language barrier", "nlp"])) {
+    const semaProject = cvData.projects.find(p => p.name.includes("SEMA"));
+    if (semaProject) {
+      return `🌍 **SEMA Platform**\n\n${semaProject.description}\n\n**Key Features:**\n${semaProject.highlights.map(h => `✨ ${h}`).join('\n')}\n\n**Tech Stack:** ${semaProject.technologies.join(", ")}\n\n${semaProject.link ? `🔗 [Visit SEMA Platform](${semaProject.link})` : ''}\n\nThis project is particularly meaningful as it addresses language accessibility across Africa, making AI technology available to millions of people in their native languages!`;
+    }
+  }
+
   if (matchKeywords(message, ["machine learning", "ml", "ai", "forecasting", "prediction"])) {
     const mlProject = cvData.projects.find(p => p.name.includes("Inventory"));
     if (mlProject) {
